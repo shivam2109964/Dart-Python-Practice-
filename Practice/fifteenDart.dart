@@ -12,6 +12,15 @@ import 'dart:io';
 /// Use [Try-catch]
 
 void main() {
-  print("Enter first numbers");
-  int number = int.parse(s)  
+  print("Enter the numerator value");
+  int numerator = int.parse(stdin.readLineSync()!);
+  print("Enter the denominator value");
+  int denominator = int.parse(stdin.readLineSync()!);
+
+  try {
+    int value = numerator ~/ denominator;
+    print("Result is $value");
+  } catch (e) {
+    print(e);
+  }
 }
